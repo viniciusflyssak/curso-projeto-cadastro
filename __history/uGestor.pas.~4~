@@ -1,0 +1,26 @@
+unit uGestor;
+
+interface
+
+uses
+  uFuncionario;
+
+type
+  TGestor = class(TFuncionario)
+  private
+    FHoraExtra : Integer;
+    procedure setHora(Value : integer);
+    public
+    property HoraExtra: integer read FHoraExtra write setHora;
+  end;
+
+implementation
+
+{ Gestor }
+
+procedure TGestor.setHora (Value : integer);
+begin
+FHoraExtra := Value;
+end;
+
+end.

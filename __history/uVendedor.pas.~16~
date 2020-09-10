@@ -1,0 +1,32 @@
+unit uVendedor;
+
+interface
+
+uses
+uFuncionario;
+
+type
+  TVendedor = class(TFuncionario)
+  private
+    FComissao: Double;
+    procedure setComissao(Value: Double);
+  public
+    property Comissao: double read FComissao write setComissao;
+    Function Ganho: Double;
+  end;
+
+implementation
+
+{ Gestor }
+
+function TVendedor.Ganho: Double;
+begin
+  Result := Salario + (Comissao * 25);
+end;
+
+procedure TVendedor.setComissao(Value: Double);
+begin
+Fcomissao := Value;
+end;
+
+end.

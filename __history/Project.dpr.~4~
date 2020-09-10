@@ -1,0 +1,16 @@
+program Project;
+
+uses
+  Vcl.Forms,
+  uFrmCadastro in 'uFrmCadastro.pas' {Finicio} ,
+  uFuncionario in 'uFuncionario.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFinicio, Finicio);
+  Application.Run;
+
+end.

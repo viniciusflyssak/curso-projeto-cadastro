@@ -1,0 +1,34 @@
+unit uFrmCadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  uFrmCadastrar;
+
+type
+  TFinicio = class(TForm)
+    PCadastro: TPanel;
+    BtCadastro: TButton;
+    procedure BtCadastroClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Finicio: TFinicio;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFinicio.BtCadastroClick(Sender: TObject);
+begin
+  Fcadastrar.Showmodal;
+end;
+
+end.
